@@ -1,0 +1,25 @@
+{
+    "schemaVersion": 1,
+    "id": "${id}",
+    "version": "${version}",
+    "name": "${name}",
+    "description": "Change fog distance, color, and water/lava fog, from OneConfig.",
+    "authors": [
+        "brownie"
+    ],
+    "license": "MIT",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "com.fogcustomizer.FogCustomizer"
+        ]
+    },
+    "mixins": [
+        "fogcustomizer.mixins.json"
+    ],
+    "depends": {
+        "minecraft": "1.8.9",
+        "fabricloader": ">=0.17",
+        "oneconfigv1": ">=1.6.0"
+    }
+}
