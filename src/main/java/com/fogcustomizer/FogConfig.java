@@ -50,7 +50,8 @@ public class FogConfig extends Config {
     @Switch(title = "Custom Fog Color", description = "Replace the sky-matched fog color (not used underwater or in lava).", subcategory = "Color")
     public static boolean customColor = false;
 
-    @Color(title = "Fog Color", subcategory = "Color")
+    // Fog is a single GL color, so a gradient's second color could never be used.
+    @Color(title = "Fog Color", subcategory = "Color", gradient = false)
     public static PolyColor color = new PolyColor(0xFFB8D4FF, false, 1.0F);
 
     private FogConfig() {
